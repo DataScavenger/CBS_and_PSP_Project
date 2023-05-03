@@ -19,7 +19,7 @@ load('C:/data/cbs_info.mat');              %structure -> with field 'subject'-ID
 load('C:/data/csinfo.mat');                %for power spectra inspection
 subjects = fieldnames(cbs_info);
 
-condition = 'rest';
+condition = 'rest';                        %resting state
 check_spectra = 'yes';
 
                       %structure    . field       . subfield
