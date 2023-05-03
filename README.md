@@ -25,8 +25,8 @@ Run the following analysis scripts in succession. Selfcoded functions used for t
 __I Preprocessing
 - cbs_sensor2areas_info
 - cbs_prep_databrowse
-		- cbs_cutstring
-		- cbs_waterfall
+	- cbs_cutstring
+	- cbs_waterfall
 - cbs_prep_ica_calculation
 - cbs_prep_ica_visualize
 - cbs_prep_cleaning
@@ -42,6 +42,8 @@ __II Parcel-Analysis
 - cbs_parcel_fooof_paper_example.py
 - cbs_parcel_fooof_power
 	- cbs_clean_subjects
+	- cbs_extract_fooof_flexible
+	- cbs_extract_fooof_oscillations
 	- cbs_mirror_activity_parcel
 - cbs_parcel_fooof_power_statistics
 	- cbs_prepare_neighbours
