@@ -66,13 +66,13 @@ groupnames = fieldnames(indices);
 for p = 1:size(Fooof.fooof_spec,1)
     for s = 1:size(Fooof.sub,1)
         
-        %extract weights (energy in this frequency)
+        %extract weights (log10(power) in this frequency that has been corrected for 1/f estimate (by substraction) -> thus are positive numbers. Output from fooof-algorithm is log10(power) values)
         vec = Fooof.fooof_spec(p,FreqsToUse,s);
         
         %reference to the smallest value in there (will be close to 0)
         vec = vec - min(vec);
         
-        %Calculate CoM
+        %Calculate CoM (sum over weighted frequency bins. Please note the "weights" in vec here are log10(power) values. The weights are all positive, as they have been corrected for the 1/f estimate)
         CoM(p,s) = (vec * Fooof.freqs(FreqsToUse)') / sum(vec);
         
     end
