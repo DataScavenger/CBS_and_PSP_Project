@@ -287,7 +287,7 @@ freqband_name = {'\theta','\alpha','Low {\beta}','High {\beta}'};
 %group difference power [all frequencies] for Brain Video
 GDPow = [];
 
-for j = 2%1:length(CodeFooof)
+for j = 1:length(CodeFooof)
     %group code
     code = CodeFooof{j};
     if length(code) ~= 2 %if there are not two groups to compare, then plot each group individually
