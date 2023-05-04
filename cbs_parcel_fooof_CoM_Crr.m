@@ -70,8 +70,6 @@ end
 %path to xlsx-sheet
 testpath = 'C:/Users/mkroe/Documents/Ausbildung/Promotion/project/RestingState/Excel_Subject_Informations/resting_state_study_I/';
 
-CoM.indices.parkinsonism = logical(CoM.indices.cbs);
-
 %groups
 groups = {'cbs'};
 
