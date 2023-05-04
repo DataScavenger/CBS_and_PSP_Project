@@ -53,7 +53,7 @@ indices.hc = contains(subjects,'hc');
 indices.aps = contains(subjects,{'cbs','psp'});
 indices.ips = logical( contains(subjects,'pd') .* contains(subjects,notremor) );
 
-%OR use overlapping clusters of hc vs. atyp & pd vs. atyp
+%use overlapping clusters of hc vs. atyp & pd vs. atyp
 parcels_of_interest = parcel.masklabel( logical( SigR.hcVSaps .* SigR.pdVSaps ) );
 
 %choose major oscillation by amplitude per parcel and per subject
