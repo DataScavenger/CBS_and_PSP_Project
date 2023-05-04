@@ -166,7 +166,6 @@ for ch = 1:length(intervall_choices)
     
     A = [];
     age = [];
-    test = [];
     for s = 1:length(subjects)
         
         %get subject s
@@ -178,7 +177,6 @@ for ch = 1:length(intervall_choices)
             warning(['Skip ',current_subject{:},': Not part of notremor group.']);
             
             age(s) = nan;
-            %test(s) = nan;
             
             continue
         end
@@ -268,7 +266,7 @@ for ch = 1:length(intervall_choices)
         
     end
     
-    %A = cell2table(A,'VariableNames',{'subject','group','parcel','test','age','CoE','NOsc','Osc','Amp'});
+    %A = cell2table(A,'VariableNames',{'subject','group','parcel','age','CoE','NOsc','Osc','Amp'});
     A = cell2table(A,'VariableNames',{'subject','group','parcel','age','CoE','NOsc','Osc','Amp'});
     
     %make group categorical
