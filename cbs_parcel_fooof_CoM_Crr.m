@@ -44,15 +44,12 @@ load([mpath,'/parcel/ana_stat/Significant_Regions.mat']);
 %Parcels that were standing out significantly by the CoE Permutation Test
 parcels_of_interest = parcel.masklabel( logical( SigR.hcVSaps .* SigR.pdVSaps ) );
 
-%flip activity
-flipit = 'no';
-
-%tests to use [which are in the xlsx-file on seperate sheets]. If two tests are given: First 'test' specifies which test to correlate. Seconds one specifies which test to use for flipping
+%tests to use [which are in the xlsx-file on seperate sheets]. If two tests are given: First 'test' specifies which test to correlate.
 use_test = {'tulia'};%{'updrs_pre_off','tulia','goldenberg_handposition','goldenberg_fingerposition','goldenberg','moca'};
 use_field = {'SUMME'};
 
 %updrs      - sum / SUMME
-%MoCA       - relative sum
+%MoCA       - relative_sum
 %goldenberg - SUMME
 %tulia      - SUMME
 
@@ -73,7 +70,7 @@ end
 %path to xlsx-sheet
 testpath = 'C:/Users/mkroe/Documents/Ausbildung/Promotion/project/RestingState/Excel_Subject_Informations/resting_state_study_I/';
 
-CoM.indices.parkinsonism = logical(CoM.indices.aps + CoM.indices.pd);
+CoM.indices.parkinsonism = logical(CoM.indices.cbs);
 
 %groups
 groups = {'cbs'};
